@@ -6,7 +6,7 @@
 /*   By: samartin <samartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 13:39:06 by samartin          #+#    #+#             */
-/*   Updated: 2024/04/09 16:30:57 by samartin         ###   ########.fr       */
+/*   Updated: 2024/04/09 16:30:32 by samartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ ClapTrap::~ClapTrap()
 {
 	std::cout << "Destructor called" << std::endl;
 }
-
 
 /* Asignment operator function */
 
