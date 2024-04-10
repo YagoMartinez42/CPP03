@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: samartin <samartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/20 12:06:33 by samartin          #+#    #+#             */
-/*   Updated: 2024/04/10 14:42:32 by samartin         ###   ########.fr       */
+/*   Created: 2024/04/09 14:08:55 by samartin          #+#    #+#             */
+/*   Updated: 2024/04/09 16:58:55 by samartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
+# include "ClapTrap.hpp"
 
-int main()
+class ScavTrap : public ClapTrap
 {
-	ScavTrap noOne = ScavTrap();
-	ScavTrap jim = ScavTrap("Jim");
-	ScavTrap jim2 = ScavTrap(jim);
-
-	for (int i = 0; i < 51; i++)
-	{
-		jim.attack("you");
-	}
-	jim2.attack("me");
-	jim2.guardGate();
-	noOne.guardGate();
-	jim.beRepaired(5);
-	std::cout << std::endl;
-	return (0);
-}
+	public:
+		ScavTrap();
+		ScavTrap(const ScavTrap& orig);
+		ScavTrap(const std::string& nameP);
+		~ScavTrap();
+		ScavTrap& operator=(const ScavTrap& st);
+		void attack(const std::string& target);
+		void guardGate();
+};
+#endif
